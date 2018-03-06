@@ -1,0 +1,132 @@
+.bloque {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    
+
+    .canciones-container {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        width: 100%;
+        @include if-desktop {
+            flex-direction: row;
+        }
+        @include if-mobile-portrait {
+            width: 100%;
+            margin-top: 30px;
+            padding: 0px;
+                }
+        .canciones-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: center;
+            text-align: justify;
+            justify-content: center;
+            
+            
+            
+
+            @include if-mobile-portrait {
+                height: 100%;
+                padding: 15px;
+          
+            }
+
+            @include if-desktop {
+                flex-direction: column;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: justify;
+                width: 90%;
+              
+                
+                
+
+                @include if-mobile-landscape {
+                    width: 40%;
+                }
+
+                @include if-desktop {
+                    width: 80%;
+                }
+
+                .nombre {
+                    font-size: $font-size-h3;
+                    font-weight: bold;
+                    padding-bottom: 30px;
+                    margin-top: 10px;
+                    font-family: $title-font-family;
+                    text-align: start;
+                }
+                
+                .texto {
+                    padding-bottom: 20px;
+                    font-size: $font-size-base;
+                    line-height: 1.7em;
+                }
+            }
+
+            .img-canciones {
+                height: 250px;
+                width: 250px;
+                border-radius:100%;
+                transition: 1s;
+               
+
+                @include if-mobile-landscape {
+                    height: 250px;
+                }
+
+                @include if-desktop {
+                    height: 250px;
+                    margin-top: 20px;
+                }
+
+            }
+            .img-canciones:hover {
+                height: 200px;
+                width: 200px;
+                transition: 1s;
+            }
+
+            &.uno {
+                background-color: transparentize($color-lightgreen, 0.7);
+                @include if-desktop {
+                    flex: 7;
+            
+                }
+               
+                }
+                &.uno video {
+                    padding-top: -10px;
+                    border-radius: 20px;
+                   
+                        @include if-mobile-portrait {
+                            height: 100%;
+                            padding-top: 60px;   
+                            padding-bottom: 80px;    
+                        }
+                    }
+            }
+    
+            &.dos {
+                background-color: transparentize($color-silver, 0.8);
+                @include if-desktop {
+                    flex: 7;
+                }
+
+             
+                }
+            
+    
+            
+        }
+
+        
+    }
